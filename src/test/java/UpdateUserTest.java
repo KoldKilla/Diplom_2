@@ -24,20 +24,17 @@ public class UpdateUserTest extends BaseTest {
     public static final String EMAIL = "email";
     public static final String PASSWORD = "password";
     public static final String NAME = "name";
-    private final UserGenerator userGenerator = new UserGenerator();
     private final UserClient userClient = new UserClient();
     private final String email;
     private final String password;
     private final String name;
     // переменная введена для отображения имени теста при прогоне параметризованных тестов
     // используется в строке 43 в аргументе у Parameters
-    private final String testName;
 
-    public UpdateUserTest(String email, String password, String name, String testName) {
+    public UpdateUserTest(String email, String password, String name) {
         this.email = email;
         this.password = password;
         this.name = name;
-        this.testName = testName;
     }
 
     @Parameterized.Parameters(name = "{index} : update {3}")
